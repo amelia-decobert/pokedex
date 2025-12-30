@@ -9,10 +9,9 @@ import router from "./src/routers/router.js";
 const PORT = process.env.PORT || 3000;
 const app = express();
 
-// Create a route test
-app.get('/', (req, res) => {
-    res.send('Hello World!');
-});
+// Define view engine template ejs and folder
+app.set("view engine", "ejs");
+app.set("views", "./src/views");
 
 app.use(express.json());
 app.use(router);
