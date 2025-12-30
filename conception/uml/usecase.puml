@@ -12,7 +12,7 @@ package Authentification {
     usecase "Access a registration form" as arf
 }
 
-package "Fonctionnalities" {
+package Fonctionnalities {
     package Pokedex {
         usecase "Search for a team" as sfatm
         usecase "View all teams" as vatm
@@ -23,12 +23,12 @@ package "Fonctionnalities" {
     }
 
     package Team {
-        usecase "Delete a Pokémon" as dap
-        usecase "Rename a Pokémon" as rap
-        usecase "Add a Pokémon" as ap
-        usecase "Delete a team" as dat
-        usecase "Rename a team" as rat
         usecase "Create a team" as cat
+        usecase "Add a Pokémon" as ap
+        usecase "Rename a Pokémon" as rap
+        usecase "Delete a Pokémon" as dap
+        usecase "Rename a team" as rat
+        usecase "Delete a team" as dat
     }
 }
 
@@ -41,10 +41,10 @@ v --> vap
 v -up-> arf
 
 p -up-> alf
-p --> dap
-p --> rap
-p --> ap
-p --> dat
-p --> rat
 p -->cat
+p --> ap
+p --> rap
+p --> dap
+p --> rat
+p --> dat
 @endum
