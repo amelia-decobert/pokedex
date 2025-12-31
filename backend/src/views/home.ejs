@@ -10,29 +10,23 @@
 <body>
     <%- include("partials/header") %>
     <main>
-        <h2>Welcome!</h2>
+        <h2>WELCOME!</h2>
 
-        <div>
-            <ul>
-                <li>
-                    <article>
-                        <img src="" alt="">
-                        <div>
-                            <h3>Visitor</h3>
-                            <a href="/pokemon">See all Pokémon</a>
-                        </div>
-                    </article>
-                </li>
-                <li>
-                    <article>
-                        <img src="" alt="">
-                        <div>
-                            <h3>Player</h3>
-                            <a href="">Login</a>
-                        </div>
-                    </article>
-                </li>
-            </ul>
+        <div class="main">
+                <article class="card">
+                    <img src="/images/pokemon-group.avif" alt="">
+                    <div>
+                        <h3>Visitor</h3>
+                        <a href="/pokemon">See all Pokémon</a>
+                    </div>
+                </article>
+                <article class="card">
+                    <img src="/images/team2.webp" alt="">
+                    <div>
+                        <h3>Player</h3>
+                        <a href="">Login</a>
+                    </div>
+                </article>
         </div>
     </main>
     <%- include("partials/footer") %>
