@@ -3,9 +3,23 @@ html, body {
     margin: 0;
 }
 
-.header {
+.logo img {
+    /* border: 1px solid black; */
+    width: 200px;
+    margin: 0.3rem;
+}
+
+nav {
+    border: 1px solid black;
+    background-color: #E3350D;
+    position: ;
     display: flex;
-    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+a {
+    text-decoration: none;
+    color: white;
 }
 
 body {
@@ -14,7 +28,7 @@ body {
 }
 
 main {
-    background-image: url("/images/grey-background.avif");
+    background-image: url("/images/blue-background.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -27,10 +41,14 @@ main {
 header {
     background-color: #E3350D;
     padding: 0.2rem;
+    display: flex;
+    justify-content: space-between;
 }
 
 h1 {
+    /* border: 1px solid black; */
     color: white;
+    margin-left: 0.3rem;
 }
 
 span {
@@ -46,7 +64,7 @@ span {
     justify-content: center;
     padding: 2rem;
     margin: 2rem auto;
-    max-width: 1200px;
+    /* max-width: 1200px; */
 }
 
 h2 {
@@ -54,8 +72,8 @@ h2 {
 }
 
 .card {
-    /* border: 1px solid black; */
     padding: 1rem;
+    margin: 1rem;
     text-align: center;
     width: 300px;
     /* flex: 1 1 300px; */
@@ -68,7 +86,6 @@ h2 {
 .card:hover {
     transform: scale(1.05);
     box-shadow: 0 8px 16px rgba(0,0,0,0.3);
-    /* border-color: #E3350D; */
 }
 
 .card img {
@@ -76,6 +93,14 @@ h2 {
     height: auto;
     border-radius: 8px;
     margin-bottom: 0.5rem;
+}
+
+.button {
+    background-color: #2793D9;
+    color: white;
+    border-radius: 4px;
+    padding: 1rem;
+    text-decoration: none;
 }
 
 footer {
