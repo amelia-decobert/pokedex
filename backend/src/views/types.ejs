@@ -4,19 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/styles.css">
-    <title>pokedex | <%= team.name %></title>
+    <title>pokedex | types</title>
 </head>
 <body>
     <%- include("partials/header") %>
     <%- include("partials/navbar") %>
     <main>
-        <h2><%= team.name %></h2>
-        <p><%= team.description %></p>
+        <h2>TYPES!</h2>
         <div class="main">
-            <% for (const pokemon of team.pokemons) { %>
-            <article class="card">
-                <img src="/images/pokemon/<%= pokemon.name %>.png" alt="<%= pokemon.name %>">
-                <h3><%= pokemon.name %></h3>
+            <% for (const type of types) { %>
+            <article>
+                <div class="type-card" style="--type-color: #<%= type.color %>;">
+                    <a href="/types/<%= type.id %>">
+                        <h3><%= type.name %></h3>
+                    </a>
+                </div>
             </article>
             <% } %>
         </div>
