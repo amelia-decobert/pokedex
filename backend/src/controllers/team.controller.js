@@ -13,7 +13,7 @@ export async function getById(req, res) {
     const team = await Team.findByPk(req.params.id, {
         include: "pokemons"
     });
-    res.json(team)
+    res.render("team", { team })
 };
 
 // Create and export async function to post new team

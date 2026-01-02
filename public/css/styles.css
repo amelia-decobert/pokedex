@@ -10,12 +10,13 @@ html, body {
 }
 
 nav {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     background-color: #E3350D;
     position: sticky;
     top: 0%;
     display: flex;
     justify-content: space-evenly;
+    padding: 0.25rem;
 }
 
 a {
@@ -47,7 +48,7 @@ header {
 }
 
 h1 {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     color: white;
     margin-left: 0.3rem;
 }
@@ -70,6 +71,12 @@ span {
 
 h2 {
     text-align: center;
+    text-transform: uppercase;
+}
+
+p {
+    text-align: center;
+    font-size: large;
 }
 
 .card {
@@ -116,8 +123,7 @@ footer {
     }
 
     nav {
-        -webkit-backface-visibility: hidden;
-        /* backface-visibility: hidden; */
+        backface-visibility: hidden;
         height: 57px;
         border: 0;
         position: fixed;

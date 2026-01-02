@@ -28,8 +28,8 @@ async function seedDatabase() {
         { id: 17, name: 'Vol', color: '6699ff' }
     ]);
 
-    // Create Pokemons
-    const pokemons = await Pokemon.bulkCreate([
+    // Create Pokemon
+    const pokemon = await Pokemon.bulkCreate([
         { id: 1, name: 'Bulbizarre', hp: 45, atk: 49, def: 49, atk_spe: 65, def_spe: 65, speed: 45 },
         { id: 2, name: 'Herbizarre', hp: 60, atk: 62, def: 63, atk_spe: 80, def_spe: 80, speed: 60 },
         { id: 3, name: 'Florizarre', hp: 80, atk: 82, def: 83, atk_spe: 100, def_spe: 100, speed: 80 },
@@ -190,7 +190,7 @@ async function seedDatabase() {
         { id: 3, name: 'Squad fofolle', description: 'Pour tout gagner' }
     ]);
 
-    // Add Pokémons to Teams
+    // Add Pokémon to Teams
     await addPokemonToTeam(3, 1);
     await addPokemonToTeam(6, 1);
     await addPokemonToTeam(9, 1);
@@ -210,7 +210,7 @@ async function seedDatabase() {
     await addPokemonToTeam(145, 3);
     await addPokemonToTeam(144, 3);
 
-    // Add Pokemons to Types
+    // Add Pokémon to Types
     await addPokemonToType(1, 10);
     await addPokemonToType(1, 11);
     await addPokemonToType(2, 10);

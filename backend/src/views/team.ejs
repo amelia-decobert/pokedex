@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>pokedex | teams</title>
+</head>
+<body>
+    <%- include("partials/header") %>
+    <%- include("partials/navbar") %>
+    <main>
+        <h2><%= team.name %></h2>
+        <p><%= team.description %></p>
+
+        <div class="main">
+            <% for (const pokemon of team.pokemons) { %>
+            <article class="card">
+                <img src="/images/pokemon/<%= pokemon.name %>.png" alt="<%= pokemon.name %>">
+                <h3><%= pokemon.name %></h3>
+                <!-- <p><%= pokemon.hp %></p>
+                <p><%= pokemon.atk %></p>
+                <p><%= pokemon.def %></p>
+                <p><%= pokemon.atk_spe %></p>
+                <p><%= pokemon.def_spe %></p>
+                <p><%= pokemon.speed %></p> -->
+            </article>
+            <% } %>
+        </div>
+
+    </main>
+    <%- include("partials/footer") %>
+</body>
+</html>
