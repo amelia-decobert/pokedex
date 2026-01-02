@@ -1,0 +1,69 @@
+GET http://localhost:3000/
+
+### Get all teams
+GET http://localhost:3000/teams
+
+### Get all pokemon
+GET http://localhost:3000/pokemon
+
+### Get one team and its pokemons
+GET http://localhost:3000/teams/2
+
+### Post new team
+POST http://localhost:3000/teams
+Content-Type: application/json
+
+{
+    "name": "Marshmallow team on fire",
+    "description": "Burn it !!!"
+}
+
+### Patch team
+PATCH http://localhost:3000/teams/3
+Content-Type: application/json
+
+{
+    "name": "Squad de foliie"
+}
+
+### Delete team
+DELETE http://localhost:3000/teams/2
+
+### Get one pokemon and its types
+GET http://localhost:3000/pokemon/123
+
+### Patch pokemon
+PATCH http://localhost:3000/pokemon/123
+Content-Type: application/json
+
+{
+    "name": "Insecator"
+}
+
+### Delete pokemon
+DELETE http://localhost:3000/pokemon/135
+
+### Patch team
+PATCH http://localhost:3000/teams/1
+Content-Type: application/json
+
+{
+    "name": "Squad de foliie"
+}
+
+### Get all types
+GET http://localhost:3000/types
+
+### Get one type and its pokemons
+GET http://localhost:3000/types/1
+
+#### Post pokemon to team
+POST http://localhost:3000/teams/1/pokemon
+Content-Type: application/json
+
+{
+    "pokemonId": 19
+}
+
+### Delete pokemon from team
+DELETE http://localhost:3000/teams/1/pokemon/19

@@ -1,0 +1,146 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+.logo img {
+    /* border: 1px solid black; */
+    width: 200px;
+    margin: 0.3rem;
+}
+
+nav {
+    /* border: 1px solid black; */
+    background-color: #E3350D;
+    position: sticky;
+    top: 0%;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0.25rem;
+}
+
+a {
+    text-decoration: none;
+    color: #f8f8f8;
+}
+
+body {
+    display: flex;
+    flex-direction: column;    
+}
+
+main {
+    background-image: url("/images/blue-background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+header {
+    background-color: #E3350D;
+    padding: 0.2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+h1 {
+    /* border: 1px solid black; */
+    color: #f8f8f8;
+    margin-left: 0.3rem;
+}
+
+span {
+    font-size: 0.5em;
+    color: black;
+    font-weight: normal;
+}
+
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 1200px;
+}
+
+h2 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+p {
+    text-align: center;
+}
+
+.card {
+    padding: 1rem;
+    margin: 1rem;
+    text-align: center;
+    width: 300px;
+    /* flex: 1 1 300px; */
+    box-sizing: border-box;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+}
+
+.type-card {
+    border: 1px solid #f8f8f8;
+    background-color: var(--type-color);
+    border-radius: 10px;
+    text-align: center;
+    width: 100px;
+    /* flex: 1 1 300px; */
+    box-sizing: border-box;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+}
+
+.button {
+    background-color: #2793D9;
+    color: #f8f8f8;
+    border-radius: 4px;
+    padding: 0.5rem;
+    text-decoration: none;
+}
+
+footer {
+    background-color: #E3350D;
+    text-align: center;
+
+    p {
+        font-size: medium;
+    }
+}
+
+@media (max-width: 650px) {
+    .card {
+        width: 100%;
+    }
+
+    nav {
+        backface-visibility: hidden;
+        height: 57px;
+        border: 0;
+        position: fixed;
+        top: 0;
+    }
+}
