@@ -4,7 +4,7 @@ import { Team, Pokemon, TeamPokemon } from "../models/associations.js";
 // Create and export async function to get all
 export async function getAll(req, res) {
     const teams = await Team.findAll();
-    res.json(teams)
+    res.render("teams", { teams })
 };
 
 // Create and export async function to get one team and its pokemons
@@ -13,7 +13,7 @@ export async function getById(req, res) {
     const team = await Team.findByPk(req.params.id, {
         include: "pokemons"
     });
-    res.json(team)
+    res.render("team", { team })
 };
 
 // Create and export async function to post new team

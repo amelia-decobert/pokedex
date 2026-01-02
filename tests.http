@@ -3,8 +3,8 @@ GET http://localhost:3000/
 ### Get all teams
 GET http://localhost:3000/teams
 
-### Get all pokemons
-GET http://localhost:3000/pokemons
+### Get all pokemon
+GET http://localhost:3000/pokemon
 
 ### Get one team and its pokemons
 GET http://localhost:3000/teams/2
@@ -30,10 +30,10 @@ Content-Type: application/json
 DELETE http://localhost:3000/teams/2
 
 ### Get one pokemon and its types
-GET http://localhost:3000/pokemons/123
+GET http://localhost:3000/pokemon/123
 
 ### Patch pokemon
-PATCH http://localhost:3000/pokemons/123
+PATCH http://localhost:3000/pokemon/123
 Content-Type: application/json
 
 {
@@ -41,7 +41,7 @@ Content-Type: application/json
 }
 
 ### Delete pokemon
-DELETE http://localhost:3000/pokemons/135
+DELETE http://localhost:3000/pokemon/135
 
 ### Patch team
 PATCH http://localhost:3000/teams/1
@@ -58,7 +58,7 @@ GET http://localhost:3000/types
 GET http://localhost:3000/types/1
 
 #### Post pokemon to team
-POST http://localhost:3000/teams/1/pokemons
+POST http://localhost:3000/teams/1/pokemon
 Content-Type: application/json
 
 {
@@ -66,4 +66,4 @@ Content-Type: application/json
 }
 
 ### Delete pokemon from team
-DELETE http://localhost:3000/teams/1/pokemons/19
+DELETE http://localhost:3000/teams/1/pokemon/19
