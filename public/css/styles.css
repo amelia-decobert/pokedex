@@ -4,7 +4,7 @@ html, body {
 }
 
 .logo img {
-    /* border: 1px solid black; */
+    border: 1px solid black;
     width: 200px;
     margin: 0.3rem;
 }
@@ -12,7 +12,8 @@ html, body {
 nav {
     border: 1px solid black;
     background-color: #E3350D;
-    position: ;
+    position: sticky;
+    top: 0%;
     display: flex;
     justify-content: space-evenly;
 }
@@ -46,7 +47,7 @@ header {
 }
 
 h1 {
-    /* border: 1px solid black; */
+    border: 1px solid black;
     color: white;
     margin-left: 0.3rem;
 }
@@ -112,5 +113,14 @@ footer {
 @media (max-width: 650px) {
     .card {
         width: 100%;
+    }
+
+    nav {
+        -webkit-backface-visibility: hidden;
+        /* backface-visibility: hidden; */
+        height: 57px;
+        border: 0;
+        position: fixed;
+        top: 0;
     }
 }
