@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>pokedex | pokemon</title>
+</head>
+<body>
+    <%- include("partials/header") %>
+    <%- include("partials/navbar") %>
+    <main>
+        <h2>POKEMON!</h2>
+        <div class="main">
+            <% for (const pokemon of pokemons) { %>
+            <article class="card">
+                <img src="/images/pokemon/<%= pokemon.name %>.png" alt="<%= pokemon.name %>">
+                <h3><%= pokemon.name %></h3>
+                <a class="button" href="/pokemon/<%= pokemon.id %>">Details</a>
+            </article>
+            <% } %>
+        </div>
+
+    </main>
+    <%- include("partials/footer") %>
+</body>
+</html>

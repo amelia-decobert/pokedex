@@ -8,8 +8,9 @@ left to right direction
 p --|> v
 
 package Authentification {
-    usecase "Access a login form" as alf
-    usecase "Access a registration form" as arf
+    usecase "Log In" as li
+    usecase "Log Out" as lo
+    usecase "Register" as rgt
 }
 
 package Fonctionnalities {
@@ -38,9 +39,10 @@ v --> sfatp
 v --> vatp
 v --> sfap
 v --> vap
-v -up-> arf
+v -up-> rgt
 
-p -up-> alf
+p -up-> li
+p -up-> lo
 p -->cat
 p --> ap
 p --> rap
