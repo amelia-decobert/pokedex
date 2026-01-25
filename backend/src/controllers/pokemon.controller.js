@@ -4,7 +4,7 @@ import { Pokemon } from "../models/associations.js";
 // Create and export async function to get all
 export async function getAll(req, res) {
     const pokemons = await Pokemon.findAll();
-    res.render("pokemonlist", {pokemons})
+    res.json(pokemons)
 };
 
 // Create and export async function to get one and its types

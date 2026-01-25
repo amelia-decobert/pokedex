@@ -1,5 +1,5 @@
-// Import express module
-import express from 'express';
+// Import Router
+import { Router } from 'express';
 
 // Import team router
 import teamRouter from "./team.router.js";
@@ -11,7 +11,7 @@ import typeRouter from "./type.router.js";
 import mainRouter from "./main.router.js";
 
 // Create router instance
-const router = express.Router();
+export const router = Router();
 
 // Use main router
 router.use("/", mainRouter);
@@ -21,6 +21,3 @@ router.use("/teams", teamRouter);
 router.use("/pokemon", pokemonRouter);
 // Use type router
 router.use("/types", typeRouter);
-
-
-export default router;

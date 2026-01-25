@@ -1,5 +1,5 @@
-// Import express module
-import express from "express";
+// Import Router
+import { Router } from 'express';
 // Import team controller
 import { getAll, getById, create, updateById, deleteById, addPokemonToTeam, deletePokemonFromTeam } from "../controllers/team.controller.js";
 // Import team middleware
@@ -7,7 +7,7 @@ import { validateTeamCreation, validateTeamUpdate } from "../middlewares/team.mi
 // Import function validateId
 import { validateId } from "../utils/common.js";
 // Create router instance
-const router = express.Router();
+const router = Router();
 
 // Define route to get all
 router.get("/", getAll);
