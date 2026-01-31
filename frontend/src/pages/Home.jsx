@@ -14,15 +14,15 @@ function Home() {
       </header>
 
       <main>
-        <h2>WELCOME!</h2>
+        <h2>BIENVENUE!</h2>
 
         <div className="main">
           <article className="card">
             <img src="/images/pokemon-group.avif" alt="" />
             <div>
-              <h3>Visitor</h3>
+              <h3>Visiteur</h3>
               <a className="button" href="/pokemon">
-                See all Pokémon
+                Voir tous les Pokémon
               </a>
             </div>
           </article>
@@ -30,9 +30,9 @@ function Home() {
           <article className="card">
             <img src="/images/team2.webp" alt="" />
             <div>
-              <h3>Player</h3>
+              <h3>Joueur</h3>
               <a className="button" href="#">
-                Login
+                Connexion
               </a>
             </div>
           </article>
