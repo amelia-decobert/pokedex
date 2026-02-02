@@ -1,5 +1,5 @@
 // Import sequelize instance
-import { sequelize } from "../models/sequelize-client.js";
+import { sequelize } from "../database/sequelize-client.js";
 // Import associations from Models
 import "../models/associations.js";
 
