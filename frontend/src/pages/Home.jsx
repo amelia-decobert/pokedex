@@ -30,7 +30,7 @@ function Home() {
           <article className="card">
             <img src="/images/team2.webp" alt="" />
             <div>
-              <h3>Joueur</h3>
+              <h3>Dresseur</h3>
               <a className="button" href="#">
                 Connexion
               </a>

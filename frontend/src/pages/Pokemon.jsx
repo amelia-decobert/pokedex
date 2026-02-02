@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Header from "../components/Header";
 import Navbar from "../components/Navbar";
 import { useParams } from "react-router-dom";
+import Footer from "../components/Footer";
 
 // Centralize max stats
 const maxStats = {
@@ -69,45 +70,58 @@ function Pokemon() {
                         {/* STATS PROGRESS BAR */}
                         <div className="stats">
                             <div className="stat">
-                                <span>HP</span>
-                                <div className="bar-fill" style={{ width: `${statPercent(pokemon.hp, maxStats.hp)}%` }}></div>
-                                <span>{pokemon.hp}/{maxStats.hp}</span>
+                                <span>PV</span>
+                                <div className="bar">
+                                    <div className="bar-fill" style={{ width: `${statPercent(pokemon.hp, maxStats.hp)}%` }}></div>
+                                </div>
+                                {/* <span>{pokemon.hp}/{maxStats.hp}</span> */}
                             </div>
 
                             <div className="stat">
-                                <span>ATK</span>
-                                <div className="bar-fill" style={{ width: `${statPercent(pokemon.atk, maxStats.atk)}%` }}></div>
-                                <span>{pokemon.atk}/{maxStats.atk}</span>
+                                <span>ATTAQUE</span>
+                                <div className="bar">
+                                    <div className="bar-fill" style={{ width: `${statPercent(pokemon.atk, maxStats.atk)}%` }}></div>
+                                </div>
+                                {/* <span>{pokemon.atk}/{maxStats.atk}</span> */}
                             </div>
 
                             <div className="stat">
-                                <span>DEF</span>
-                                <div className="bar-fill" style={{ width: `${statPercent(pokemon.def, maxStats.def)}%` }}></div>
-                                <span>{pokemon.def}/{maxStats.def}</span>
+                                <span>DÉFENSE</span>
+                                <div className="bar">
+                                    <div className="bar-fill" style={{ width: `${statPercent(pokemon.def, maxStats.def)}%` }}></div>
+                                </div>
+                                {/* <span>{pokemon.def}/{maxStats.def}</span> */}
                             </div>
 
                             <div className="stat">
-                                <span>ATK SPE</span>
-                                <div className="bar-fill" style={{ width: `${statPercent(pokemon.atk_spe, maxStats.atk_spe)}%` }}></div>
-                                <span>{pokemon.atk_spe}/{maxStats.atk_spe}</span>
+                                <span>ATTAQUE SPÉCIALE</span>
+                                <div className="bar">
+                                    <div className="bar-fill" style={{ width: `${statPercent(pokemon.atk_spe, maxStats.atk_spe)}%` }}></div>
+                                </div>
+                                {/* <span>{pokemon.atk_spe}/{maxStats.atk_spe}</span> */}
                             </div>
 
                             <div className="stat">
-                                <span>DEF SPE</span>
-                                <div className="bar-fill" style={{ width: `${statPercent(pokemon.def_spe, maxStats.def_spe)}%` }}></div>
-                                <span>{pokemon.def_spe}/{maxStats.def_spe}</span>
+                                <span>DÉFENSE SPÉCIALE</span>
+                                <div className="bar">
+                                    <div className="bar-fill" style={{ width: `${statPercent(pokemon.def_spe, maxStats.def_spe)}%` }}></div>
+                                </div>
+                                {/* <span>{pokemon.def_spe}/{maxStats.def_spe}</span> */}
                             </div>
 
                             <div className="stat">
-                                <span>SPEED</span>
-                                <div className="bar-fill" style={{ width: `${statPercent(pokemon.speed, maxStats.speed)}%` }}></div>
-                                <span>{pokemon.speed}/{maxStats.speed}</span>
+                                <span>VITESSE</span>
+                                <div className="bar">
+                                    <div className="bar-fill" style={{ width: `${statPercent(pokemon.speed, maxStats.speed)}%` }}></div>
+                                </div>
+                                {/* <span>{pokemon.speed}/{maxStats.speed}</span> */}
                             </div>
 
                         </div>
                     </article>
                 </div>
             </main>
+            <Footer />
         </>
     )
 }
