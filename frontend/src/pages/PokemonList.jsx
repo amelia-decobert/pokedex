@@ -7,26 +7,26 @@ import { Link } from "react-router-dom";
 function PokemonList() {
   const [allPokemon, setAllPokemon] = useState([]);
   const [loading, setLoading] = useState(true);
-  const[pageError, setPageError] = useState(null);
+  const [pageError, setPageError] = useState(null);
 
   useEffect(() => {
     const fetchAllPokemon = async () => {
-        try {
-            const response = await fetch("http://localhost:3000/api/pokemon");
+      try {
+        const response = await fetch("http://localhost:3000/api/pokemon");
 
-            if (!response.ok) {
-                throw new Error("Erreur")
-            }
-
-            const data = await response.json();
-            setAllPokemon(data);
-        } catch (err) {
-            if (err instanceof Error) {
-                setPageError(err.message);
-            }
-        } finally {
-            setLoading(false)
+        if (!response.ok) {
+          throw new Error("Erreur")
         }
+
+        const data = await response.json();
+        setAllPokemon(data);
+      } catch (err) {
+        if (err instanceof Error) {
+          setPageError(err.message);
+        }
+      } finally {
+        setLoading(false)
+      }
     }
     fetchAllPokemon();
   }, []);

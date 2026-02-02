@@ -138,6 +138,35 @@ footer {
     }
 }
 
+/* STATS PROGRESS BAR */
+.stats {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.stat {
+    display: grid;
+    grid-template-columns: 70px 1fr 80px;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+}
+
+.bar {
+    height: 10px;
+    background: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.bar-fill {
+    height: 100%;
+    background: #4caf50;
+    transition: width 0.4s ease;
+}
+
+
 @media (max-width: 650px) {
     .card {
         width: 100%;

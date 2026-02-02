@@ -1,10 +1,10 @@
 function Navbar() {
     return (
         <nav>
-            <a href="/">Home</a>
+            <a href="/">Accueil</a>
             <a href="/pokemon">Pokémon</a>
             <a href="/types">Types</a>
-            <a href="/teams">Teams</a>
+            <a href="/teams">Équipes</a>
         </nav>
     )
 }
