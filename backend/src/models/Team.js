@@ -13,6 +13,10 @@ Team.init({
     },
     description: {
         type: DataTypes.STRING(255)
+    },
+    user_id: {
+        type: DataTypes.INTEGER(),
+        allowNull: false
     }
 }, {
     sequelize,

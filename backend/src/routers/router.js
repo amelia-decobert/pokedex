@@ -9,6 +9,8 @@ import pokemonRouter from "./pokemon.router.js";
 import typeRouter from "./type.router.js";
 // Import main router
 import mainRouter from "./main.router.js";
+// Import auth router
+import authRouter from "./auth.router.js";
 
 // Create router instance
 export const router = Router();
@@ -21,3 +23,5 @@ router.use("/teams", teamRouter);
 router.use("/pokemon", pokemonRouter);
 // Use type router
 router.use("/types", typeRouter);
+// Use auth router
+router.use("/auth", authRouter);
