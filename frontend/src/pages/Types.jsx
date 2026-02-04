@@ -46,7 +46,7 @@ function Types() {
             <Navbar />
 
             <main>
-                <h2>TYPES!</h2>
+                <h2>TYPES</h2>
                 <div className="main">
                     {allTypes.map(type => (
                         <article key={type.id}>

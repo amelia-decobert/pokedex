@@ -29,11 +29,11 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    background-image: url("/images/blue-background.jpg");
+    /* background-image: url("/images/blue-background.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    background-attachment: fixed;
+    background-attachment: fixed; */
 }
 
 main {
@@ -41,6 +41,12 @@ main {
     flex: 1 0 auto;
     display: flex;
     flex-direction: column;
+    background-image: url("/images/blue-background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+
 }
 
 header {
@@ -157,7 +163,7 @@ footer {
 
 span {
     /* border: 1px solid red; */
-    justify-self: end;
+    justify-self: start;
 }
 
 .bar {

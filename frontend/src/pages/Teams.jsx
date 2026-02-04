@@ -44,7 +44,7 @@ function Teams() {
       <Header />
       <Navbar />
       <main>
-        <h2>ÉQUIPES!</h2>
+        <h2>ÉQUIPES</h2>
         <div className="main">
           {allTeams.map(team => (
             <article className="card" key={team.id}>

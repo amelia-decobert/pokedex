@@ -45,7 +45,7 @@ function PokemonList() {
       <Navbar />
 
       <main>
-        <h2>POKÉMON!</h2>
+        <h2>POKÉMON</h2>
         <div className="main">
           {allPokemon.map(pokemon => (
             <article className="card" key={pokemon.id}>

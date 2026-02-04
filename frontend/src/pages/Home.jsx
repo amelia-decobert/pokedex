@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
 
 function Home() {
@@ -21,9 +22,9 @@ function Home() {
             <img src="/images/pokemon-group.avif" alt="" />
             <div>
               <h3>Visiteur</h3>
-              <a className="button" href="/pokemon">
+              <Link className="button" to="/pokemon">
                 Voir tous les Pokémon
-              </a>
+              </Link>
             </div>
           </article>
 
@@ -31,9 +32,9 @@ function Home() {
             <img src="/images/team2.webp" alt="" />
             <div>
               <h3>Dresseur</h3>
-              <a className="button" href="#">
+              <Link className="button" to="/auth">
                 Connexion
-              </a>
+              </Link>
             </div>
           </article>
         </div>

@@ -62,8 +62,9 @@ export async function login(req, res) {
     }
 
     // Create token
+    // JWT_SECRET signs the token; same secret is required later to verify the token
     const token = jwt.sign({ id: user.id }, process.env.JWT_SECRET, { expiresIn: "1h" });
 
     res.json({ token });
-
 }
+// console.log("JWT SECRET: ", process.env.JWT_SECRET);
