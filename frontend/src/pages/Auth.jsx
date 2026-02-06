@@ -18,23 +18,25 @@ function Auth() {
                 <h2>CONNEXION</h2>
 
                 <div className="main">
-                    <article className="card">
-                        <img src="/images/nectar_de_saison_1.jpg" alt="" />
-                        <div>
-                            <h3>S'inscrire</h3>
+                    <div className="cards">
+                        <article className="card">
+                            <img src="/images/nectar_de_saison_1.jpg" alt="" />
+                            <div>
+                                <h3>S'inscrire</h3>
 
-                            <RegisterForm />
-                        </div>
-                    </article>
+                                <RegisterForm />
+                            </div>
+                        </article>
 
-                    <article className="card">
-                        <img src="/images/nectar_de_saison_2.jpg" alt="" />
-                        <div>
-                            <h3>Se connecter</h3>
+                        <article className="card">
+                            <img src="/images/nectar_de_saison_2.jpg" alt="" />
+                            <div>
+                                <h3>Se connecter</h3>
 
-                            <LoginForm />
-                        </div>
-                    </article>
+                                <LoginForm />
+                            </div>
+                        </article>
+                    </div>
                 </div>
             </main>
 

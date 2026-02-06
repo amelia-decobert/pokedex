@@ -48,16 +48,18 @@ function Type() {
             < main >
                 <h2>{type.name}</h2>
                 <div className="main">
-                    {type.pokemons.length === 0 ? (
-                        <p>Pas de Pokémon pour le moment...</p>
-                    ) : (
-                        type.pokemons?.map((pokemon) => (
-                            <article className="card" key={pokemon.id}>
-                                <img src={`/images/pokemon/${pokemon.name.toLowerCase()}.png`} alt={pokemon.name} />
-                                <h3>{pokemon.name}</h3>
-                            </article>
-                        )))
-                    }
+                    <div className="cards">
+                        {type.pokemons.length === 0 ? (
+                            <p>Pas de Pokémon pour le moment...</p>
+                        ) : (
+                            type.pokemons?.map((pokemon) => (
+                                <article className="card" key={pokemon.id}>
+                                    <img src={`/images/pokemon/${pokemon.name.toLowerCase()}.png`} alt={pokemon.name} />
+                                    <h3>{pokemon.name}</h3>
+                                </article>
+                            )))
+                        }
+                    </div>
                 </div>
             </main >
             <Footer />

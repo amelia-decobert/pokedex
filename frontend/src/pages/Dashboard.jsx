@@ -52,16 +52,20 @@ function Dashboard() {
             < Header />
             <AuthNavbar />
             <main>
-                <h2>MES ÉQUIPES</h2>
+                <h2>MON TABLEAU DE BORD</h2>
+
                 <div className="main">
-                    {myTeams.map(team => (
-                        <article className="card" key={team.id}>
-                            <img src="/images/mini-pokeball.png" alt="mini-pokeball" />
-                            <h3>{team.name}</h3>
-                            <p>{team.description}</p>
-                            <Link className="button" to={`/teams/${team.id}`}>Modifier</Link>
-                        </article>
-                    ))}
+                    <h3>MES ÉQUIPES</h3>
+                    <div className="cards">
+                        {myTeams.map(team => (
+                            <article className="card" key={team.id}>
+                                <img src="/images/mini-pokeball.png" alt="mini-pokeball" />
+                                <h3>{team.name}</h3>
+                                <p>{team.description}</p>
+                                <Link className="button" to={`/teams/${team.id}`}>Modifier</Link>
+                            </article>
+                        ))}
+                    </div>
                 </div>
             </main>
             <Footer />

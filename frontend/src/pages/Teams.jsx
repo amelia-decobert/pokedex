@@ -46,14 +46,16 @@ function Teams() {
       <main>
         <h2>ÉQUIPES</h2>
         <div className="main">
-          {allTeams.map(team => (
-            <article className="card" key={team.id}>
-              <img src="/images/mini-pokeball.png" alt="mini-pokeball" />
-              <h3>{team.name}</h3>
-              <p>{team.description}</p>
-              <Link className="button" to={`/teams/${team.id}`}>Details</Link>
-            </article>
-          ))}
+          <div className="cards">
+            {allTeams.map(team => (
+              <article className="card" key={team.id}>
+                <img src="/images/mini-pokeball.png" alt="mini-pokeball" />
+                <h3>{team.name}</h3>
+                <p>{team.description}</p>
+                <Link className="button" to={`/teams/${team.id}`}>Details</Link>
+              </article>
+            ))}
+          </div>
         </div>
       </main>
       <Footer />

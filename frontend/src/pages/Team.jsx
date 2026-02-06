@@ -48,16 +48,18 @@ function Team() {
                 <h2>{team.name}</h2>
                 <p>{team.description}</p>
                 <div className="main">
-                    {team.pokemons.length === 0 ? (
-                        <p>Pas de Pokémon pour le moment...</p>
-                    ) : (
-                        team.pokemons?.map((pokemon) => (
-                            <article className="card" key={pokemon.id}>
-                                <img src={`/images/pokemon/${pokemon.name.toLowerCase()}.png`} alt={pokemon.name} />
-                                <h3>{pokemon.name}</h3>
-                            </article>
-                        )))
-                    }
+                    <div className="cards">
+                        {team.pokemons.length === 0 ? (
+                            <p>Pas de Pokémon pour le moment...</p>
+                        ) : (
+                            team.pokemons?.map((pokemon) => (
+                                <article className="card" key={pokemon.id}>
+                                    <img src={`/images/pokemon/${pokemon.name.toLowerCase()}.png`} alt={pokemon.name} />
+                                    <h3>{pokemon.name}</h3>
+                                </article>
+                            )))
+                        }
+                    </div>
                 </div>
             </main >
             <Footer />

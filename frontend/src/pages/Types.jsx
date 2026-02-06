@@ -48,15 +48,17 @@ function Types() {
             <main>
                 <h2>TYPES</h2>
                 <div className="main">
-                    {allTypes.map(type => (
-                        <article key={type.id}>
-                            <div className="type-card" style={{"--type-color": `#${type.color}`}}>
-                                <Link to={`/types/${type.id}`}>
-                                    <h3>{type.name}</h3>
-                                </Link>
-                            </div>
-                        </article>
-                    ))}
+                    <div className="cards">
+                        {allTypes.map(type => (
+                            <article key={type.id}>
+                                <div className="type-card" style={{ "--type-color": `#${type.color}` }}>
+                                    <Link to={`/types/${type.id}`}>
+                                        <h3>{type.name}</h3>
+                                    </Link>
+                                </div>
+                            </article>
+                        ))}
+                    </div>
                 </div>
             </main>
 
