@@ -11,6 +11,8 @@ import typeRouter from "./type.router.js";
 import mainRouter from "./main.router.js";
 // Import auth router
 import authRouter from "./auth.router.js";
+// Import dashboard router
+import dashboardRouter from "./dashboard.router.js";
 
 // Create router instance
 export const router = Router();
@@ -25,3 +27,5 @@ router.use("/pokemon", pokemonRouter);
 router.use("/types", typeRouter);
 // Use auth router
 router.use("/auth", authRouter);
+// Use dashboard router
+router.use("/dashboard", dashboardRouter);

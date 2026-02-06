@@ -33,7 +33,7 @@ function LoginForm() {
 
             localStorage.setItem("token", data.token);
 
-            navigate("/teams");
+            navigate("/dashboard");
 
         } catch (err) {
             setError(err.message)

@@ -2,6 +2,9 @@
 import Joi from "joi";
 // Import checkboy function
 import { checkBody } from "../utils/common.js";
+// Import jwt
+import jwt from "jsonwebtoken"
+
 
 // Create and export function to validate user creation
 export function validateUserCreation(req, res, next) {
@@ -27,13 +30,13 @@ export function authRegister(req, res, next) {
     const authHeader = req.headers.authorization;
 
     if (!authHeader) {
-        return res.status(401).json({ message: "No token provided"})
+        return res.status(401).json({ message: "No token provided" })
     }
 
     const token = authHeader.split(" ")[1];
 
     if (!token) {
-        return res.status(401).json({ message: "Invalid token"})
+        return res.status(401).json({ message: "Invalid token" })
     }
 
     try {
@@ -43,6 +46,6 @@ export function authRegister(req, res, next) {
 
         next();
     } catch (err) {
-        return res.status(401).json({ message: "Invalid or expired token"})
+        return res.status(401).json({ message: "Invalid or expired token" })
     }
 }

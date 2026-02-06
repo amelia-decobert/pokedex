@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
 import LoginForm from "../components/LoginForm";
 import RegisterForm from "../components/RegisterForm";
@@ -6,9 +7,7 @@ function Auth() {
     return (
         <>
             <header>
-                <h1>
-                    Pokédex <span>ポケモン図鑑</span>
-                </h1>
+                <h1><Link to="/">Pokédex</Link> <span>ポケモン図鑑</span></h1>
 
                 <div className="logo">
                     <img src="/images/logo.png" alt="Pokédex logo" />

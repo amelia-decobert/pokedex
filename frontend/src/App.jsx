@@ -7,6 +7,7 @@ import Team from "./pages/Team";
 import Type from "./pages/Type";
 import Pokemon from "./pages/Pokemon";
 import Auth from "./pages/Auth";
+import Dashboard from "./pages/Dashboard";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/types/:id" element={<Type />} />
         <Route path="/teams" element={<Teams />} />
         <Route path="/teams/:id" element={<Team />} />
+        <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
     </BrowserRouter>
   );
