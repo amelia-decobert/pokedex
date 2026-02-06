@@ -1,7 +1,8 @@
 // Import sequelize instance
 import { sequelize } from "../database/sequelize-client.js";
 // Import associations from Models
-import { Pokemon, Team, Type } from "../models/associations.js";
+import { Pokemon, Team, Type, User } from "../models/associations.js";
+import bcrypt from "bcrypt";
 
 // Define async function to seed DB
 async function seedDatabase() {
@@ -182,13 +183,21 @@ async function seedDatabase() {
         // { id: 150, name: 'Mewtwo', hp: 106, atk: 110, def: 90, atk_spe: 154, def_spe: 90, speed: 130 },
         // { id: 151, name: 'Mew', hp: 100, atk: 100, def: 100, atk_spe: 100, def_spe: 100, speed: 100 }
     ]);
+    
+    // Create User
+    const adminUser = await User.create({
+        username: "Admin",
+        email: "admin@example.com",
+        password: await bcrypt.hash("password123", 10)
+    });
 
     // Create Teams
     const teams = await Team.bulkCreate([
-        { id: 1, name: 'Ultimate Team', description: 'La meilleure team du monde' },
-        { id: 2, name: 'La Team de l\'enfer', description: 'Le feuuuuu' },
-        { id: 3, name: 'Squad fofolle', description: 'Pour tout gagner' }
+        { id: 1, name: 'Ultimate Team', description: 'La meilleure team du monde', user_id: adminUser.id },
+        { id: 2, name: 'La Team de l\'enfer', description: 'Le feuuuuu', user_id: adminUser.id },
+        { id: 3, name: 'Squad fofolle', description: 'Pour tout gagner', user_id: adminUser.id }
     ]);
+
 
     // Add Pokémon to Teams
     await addPokemonToTeam(3, 1);

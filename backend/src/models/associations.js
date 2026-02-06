@@ -5,6 +5,7 @@ import { Type } from "./Type.js";
 import { TeamPokemon } from "./TeamPokemon.js";
 import { PokemonType } from "./PokemonType.js";
 import { sequelize } from "../database/sequelize-client.js";
+import { User } from "./User.js";
 
 // Define associations
 // Pokemon N - N Type
@@ -36,6 +37,18 @@ Pokemon.belongsToMany(Team, {
     foreignKey: "pokemon_id",
     otherKey: "team_id",
     as: "teams"
+});
+
+// User 1 - N Team
+User.hasMany(Team, {
+    foreignKey: "user_id",
+    as: "teams"
+});
+
+// Team N - 1 User
+Team.belongsTo(User, {
+    foreignKey: "user_id",
+    as: "user"
 })
 
 // Export all Models and associations
@@ -45,5 +58,6 @@ export {
     TeamPokemon,
     Type,
     PokemonType,
+    User,
     sequelize
 }

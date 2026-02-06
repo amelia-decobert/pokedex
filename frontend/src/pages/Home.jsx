@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
 
 function Home() {
@@ -17,28 +18,30 @@ function Home() {
         <h2>BIENVENUE!</h2>
 
         <div className="main">
-          <article className="card">
-            <img src="/images/pokemon-group.avif" alt="" />
-            <div>
-              <h3>Visiteur</h3>
-              <a className="button" href="/pokemon">
-                Voir tous les Pokémon
-              </a>
-            </div>
-          </article>
+          <div className="cards">
+            <article className="card">
+              <img src="/images/pokemon-group.avif" alt="" />
+              <div>
+                <h3>Visiteur</h3>
+                <Link className="button" to="/pokemon">
+                  Voir tous les Pokémon
+                </Link>
+              </div>
+            </article>
 
-          <article className="card">
-            <img src="/images/team2.webp" alt="" />
-            <div>
-              <h3>Dresseur</h3>
-              <a className="button" href="#">
-                Connexion
-              </a>
-            </div>
-          </article>
+            <article className="card">
+              <img src="/images/team2.webp" alt="" />
+              <div>
+                <h3>Dresseur</h3>
+                <Link className="button" to="/auth">
+                  Connexion
+                </Link>
+              </div>
+            </article>
+          </div>
         </div>
       </main>
-    <Footer />
+      <Footer />
 
     </>
   );

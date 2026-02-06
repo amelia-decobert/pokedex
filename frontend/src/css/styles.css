@@ -29,11 +29,11 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    background-image: url("/images/blue-background.jpg");
+    /* background-image: url("/images/blue-background.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    background-attachment: fixed;
+    background-attachment: fixed; */
 }
 
 main {
@@ -41,6 +41,12 @@ main {
     flex: 1 0 auto;
     display: flex;
     flex-direction: column;
+    background-image: url("/images/blue-background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+
 }
 
 header {
@@ -63,13 +69,13 @@ span {
 }
 
 .main {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    /* flex-wrap: wrap; */
     gap: 1rem;
     justify-content: center;
     padding: 2rem;
     margin: 2rem auto;
-    max-width: 1200px;
+    /* max-width: 1200px; */
 }
 
 h2 {
@@ -77,8 +83,18 @@ h2 {
     text-transform: uppercase;
 }
 
+h3 {
+    padding-left: 16px;
+}
+
 p {
     text-align: center;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .card {
@@ -91,6 +107,10 @@ p {
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     background-color: #f8f8f8;
     border-radius: 10px;
+}
+
+.card h3 {
+    padding-left: 0;
 }
 
 .type-card {
@@ -157,7 +177,7 @@ footer {
 
 span {
     /* border: 1px solid red; */
-    justify-self: end;
+    justify-self: start;
 }
 
 .bar {

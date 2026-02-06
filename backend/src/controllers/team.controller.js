@@ -18,8 +18,13 @@ export async function getById(req, res) {
 
 // Create and export async function to post new team
 export async function create(req, res) {
-    // Do not forget use req body in method
-    const newTeam = await Team.create(req.body);
+    const { name, description } = req.body;
+
+    const newTeam = await Team.create({
+        name,
+        description,
+        user_id: req.user.id
+    });
     res.json(newTeam)
 };
 
